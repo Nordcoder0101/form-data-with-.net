@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using first_form.Models;
 
 namespace first_form
 {
@@ -13,24 +14,23 @@ namespace first_form
     }
     [HttpGet]
     [Route("show/{name}/{dojo}/{language}")]
-    public ViewResult result(string name, string dojo, string language)
+    public ViewResult result(string name, string dojo, string language, string comment)
     {
-      ViewBag.name = name;
-      ViewBag.dojo = dojo;
-      ViewBag.language = language;
-
-      return View();
+      Survey NewSurvey = new Survey(name, dojo, language, comment);
+      
+      return View(NewSurvey);
     }
 
 
     [HttpPost]
     [Route("post")]
-    public IActionResult Post(string name, string dojo, string language)
+    public IActionResult Post(string Name, string Dojo, string Language, string Comment)
     {   
         var response = new {
-          name = name,
-          dojo = dojo,
-          language = language
+          name = Name,
+          dojo = Dojo,
+          language = Language,
+          comment = Comment
 
         };
         

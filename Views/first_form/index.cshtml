@@ -1,24 +1,36 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script rel="text/javascript" src="~/jquery/js.js"></script>
   <title>Document</title>
+  <!-- <script type="text/javascript">
+  $(document).ready(function(){
+  $(".test").click(function() {
+    console.log("Oh hi!")
+  })
+})
+</script> -->
 </head>
 <body>
+  <button class="test">Click Me</button>
   <form action="post" method="POST">
-    <input name="name" type="input">
+    <input name="Name" type="input">
     <select name="dojo">
-      <option value="seattle">Seattle</option>
-      <option value="san_jose">San Jose</option>
-      <option value="chicago">Chicago</option>
+      <option value="Seattle">Seattle</option>
+      <option value="San_jose">San Jose</option>
+      <option value="Chicago">Chicago</option>
     </select>
-    <select name="language">
-      <option value="python">Python</option>
+    <select name="Language">
+      <option value="Python">Python</option>
       <option value="JavaScript">JavaScript</option>
-      <option value="c_sharp">C#</option>
+      <option value="C_sharp">C#</option>
     </select>
+    <textarea name = "Comment"></textarea>
     <input type = "submit" value="Submit">
   </form>
 </body>
